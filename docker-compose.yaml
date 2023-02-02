@@ -1,7 +1,6 @@
 services:
   web:
-    build:
-      dockerfile: ./nginx/Dockerfile
+    image: nginx:latest
     ports:
       - 8090:80
     volumes:
@@ -9,18 +8,26 @@ services:
   app:
     build:
       dockerfile: ./php/Dockerfile
+    volumes:
+      - ./app:/var/www/html
+    environment: #para ficar disponivel no app
+      MYSQL_HOST: db
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
   db:
     image: mysql:latest
     volumes:
       - mysqldata:/var/lib/mysql
     ports:
-      - 3306:3306
+      - ${MYSQL_PORT}:3306
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: secret
-      MYSQL_DATABASE: banco-teste
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
 
 volumes:
   mysqldata:
