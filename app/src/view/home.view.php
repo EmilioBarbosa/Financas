@@ -30,8 +30,8 @@
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="#" class="text-slate-50 hover:bg-slate-50 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#" class="text-slate-50 hover:bg-slate-50 hover:text-black  px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                        <a href="/" class="text-slate-50 hover:bg-slate-50 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="/login" class="text-slate-50 hover:bg-slate-50 hover:text-black  px-3 py-2 rounded-md text-sm font-medium">Login</a>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,20 @@
     <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</a>
+            <a href="/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+            <a href="/login" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</a>
+        </div>
+    </div>
+
+    <!--hero-->
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+                <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-700">Organize-se</h2>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Melhor forma para organizar seus gastos </p>
+                <p class="mt-6 mb-6 text-lg leading-8 text-gray-600">Cadastre seus gastos, os tipos, valores e formas de pagamento e receba um relatório dos seus gastos no seu e-mail no começo do mês.</p>
+                <a href="/register" class="bg-indigo-700 hover:bg-violet-700 text-white px-5 py-4 rounded-md text-base font-medium">Cadastre-se</a>
+            </div>
         </div>
     </div>
 </nav>
