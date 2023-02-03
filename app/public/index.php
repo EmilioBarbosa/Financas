@@ -10,3 +10,11 @@ if($uri === '/'){
     $homeController =  new HomeController();
     $homeController->index();
 }
+if ($uri === '/login'){
+    $homeController = new HomeController();
+    $homeController->login();
+}
+if ($uri === '/register'){
+    $homeController = new HomeController();
+    $homeController->register();
+}
