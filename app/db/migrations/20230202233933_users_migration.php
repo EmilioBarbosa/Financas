@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class ExpensesMigration extends AbstractMigration
+final class UsersMigration extends AbstractMigration
 {
     /**
      * Change Method.
@@ -18,13 +18,11 @@ final class ExpensesMigration extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('expenses');
-        $table->addColumn('user_id', 'integer')
-              ->addColumn('name', 'string')
-              ->addColumn('price', 'float')
-              ->addColumn('category_id', 'integer')
-              ->addColumn('type_of_payment', 'enum', [ "values" => ['CŔEDITO','DÉBITO','PIX','DINHEIRO']])
-              ->addTimestampsWithTimezone()
+        $table = $this->table('users');
+        $table->addColumn('name', 'string');
+        $table->addColumn('login', 'string');
+        $table->addColumn('email', 'string');
+        $table->addColumn('password', 'string')
               ->create();
     }
 }
