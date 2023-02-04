@@ -1,22 +1,26 @@
 <?php
-
 namespace App\controller;
 
+use App\view\View;
 
 class HomeController
 {
-    public function index()
+    /**
+     * @throws \Exception
+     */
+    public function home(): string
     {
-        require "../src/view/home.view.php";
+        return View::make('home');
     }
 
-    public function login()
+    public function login(): string
     {
-        require "../src/view/login.view.php";
+        return View::make('login');
     }
 
-    public function register()
+    public function register(): string
     {
-        require "../src/view/register.view.php";
+        return View::make('register');
     }
+
 }
