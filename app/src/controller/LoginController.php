@@ -3,14 +3,12 @@ namespace App\controller;
 
 use App\core\View;
 
-class HomeController
+class LoginController
 {
 
     public function create(): string
     {
-        return View::make('home');
+        return View::make('login');
     }
-
-
 
 }

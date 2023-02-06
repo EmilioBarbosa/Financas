@@ -1,6 +1,6 @@
 <?php
 
-namespace App\view;
+namespace App\core;
 const VIEW_PATH = __DIR__ . '/../view';
 
 class View

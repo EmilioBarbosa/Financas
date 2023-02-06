@@ -20,7 +20,7 @@ final class UsersMigration extends AbstractMigration
     {
         $table = $this->table('users');
         $table->addColumn('name', 'string');
-        $table->addColumn('login', 'string');
+        $table->addColumn('username', 'string');
         $table->addColumn('email', 'string');
         $table->addColumn('password', 'string')
               ->create();
