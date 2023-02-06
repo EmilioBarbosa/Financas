@@ -5,9 +5,7 @@ use App\view\View;
 
 class HomeController
 {
-    /**
-     * @throws \Exception
-     */
+
     public function home(): string
     {
         return View::make('home');

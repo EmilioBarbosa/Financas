@@ -26,6 +26,11 @@ class View
         if (!file_exists($viewPath)){
             throw new \Exception('View not found');
         }
+
+        foreach ($this->params as $key => $value){
+            $$key = $value;
+        }
+
         ob_start();
 
         include $viewPath;
