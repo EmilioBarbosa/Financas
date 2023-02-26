@@ -15,7 +15,8 @@
         "ext-pdo_mysql": "*",
         "robmorgan/phinx": "1.x-dev",
         "symfony/yaml": "6.3.x-dev",
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "vlucas/phpdotenv": "^5.5@dev"
     },
     "autoload": {
         "psr-4": {

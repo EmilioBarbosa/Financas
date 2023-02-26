@@ -12,22 +12,22 @@ services:
       - ./app:/var/www/html
     environment: #para ficar disponivel no app
       MYSQL_HOST: db
-      MYSQL_PORT: ${MYSQL_PORT}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PORT: 3306
+      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: financas
+      MYSQL_USER: admin
   db:
     image: mysql:latest
     volumes:
       - mysqldata:/var/lib/mysql
     ports:
-      - ${MYSQL_PORT}:3306
+      - 3306:3306
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: financas
 
 volumes:
   mysqldata:

@@ -11,8 +11,5 @@ class RegisterController
         return View::make('register');
     }
 
-    public function store()
-    {
-        $
-    }
+
 }
